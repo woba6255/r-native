@@ -15,10 +15,13 @@ async function a() {
       link.href = './build/index.html?${params}';
       link.click();
     `
+
+	const platform = {HTMLPath: HTMLAndroidPath}
+
 	const webview = {
 		uri: env.IS_DEV
 			? env.DEV_SERVER
-			: HTMLAndroidPath
+			: platform.HTMLPath
 		,
 
 		injectJS: env.IS_DEV
@@ -32,16 +35,16 @@ async function a() {
 			<View>
 				<View style={{width: '100%', height: '100%'}}>
 					<Text>{String(env.DEV_SERVER)}</Text>
-					{/*<WebView*/}
-					{/*	injectedJavaScript={webview.injectJS}*/}
-					{/*	source={webview.uri/*{*/}
-					{/*		uri: 'http://192.168.1.102:3001/metrics',*/}
-					{/*		method: 'GET'*/}
-					{/*	}*!/*/}
-					{/*	originWhitelist={['*']}*/}
-					{/*	allowFileAccess={true}*/}
-					{/*	// onMessage={onMessage}*/}
-					{/*/>*/}
+					<WebView
+						injectedJavaScript={webview.injectJS}
+						source={webview.uri/*{
+							uri: 'http://192.168.1.102:3001/metrics',
+							method: 'GET'
+						}*/}
+						originWhitelist={['*']}
+						allowFileAccess={true}
+						// onMessage={onMessage}
+					/>
 				</View>
 			</View>
 		</>
