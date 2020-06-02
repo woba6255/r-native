@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "android": "react-native run-android",
+    "run-a": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "server": "json-server --watch db.json --port 4000",
+    "cra": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "lint": "eslint ."
   },
   "dependencies": {
