@@ -21,24 +21,24 @@
 15    <application
 15-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:5:5-25:19
 16        android:name="com.test3.MainApplication"
-16-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:7:13-44
+16-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:6:13-44
 17        android:allowBackup="false"
-17-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:11:13-40
+17-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:10:13-40
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.1.0] C:\Users\woba6\.gradle\caches\transforms-2\files-2.1\4f509a65121478d6153615d7ef5b7c5f\core-1.1.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:9:13-47
+20-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:8:13-47
 21        android:label="@string/app_name"
-21-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:8:13-45
+21-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:7:13-45
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:10:13-58
+22-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:9:13-58
 23        android:theme="@style/AppTheme"
-23-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:12:13-44
+23-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:11:13-44
 24        android:usesCleartextTraffic="true" >
-24-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:6:13-48
+24-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:12:13-48
 25        <activity
-25-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:13:9-23:20
+25-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:13:5-23:20
 26            android:name="com.test3.MainActivity"
 26-->C:\Users\woba6\projects\r-native\android\app\src\main\AndroidManifest.xml:14:17-45
 27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"

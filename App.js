@@ -5,38 +5,43 @@ import Colors from 'react-native/Libraries/NewAppScreen/components/Colors'
 import { env } from './env'
 
 
-
-
 const App: () => React$Node = () => {
 	const params = 'platform=' + Platform.OS
 	const HTMLAndroidPath = 'file:///android_asset/Web.bundle/loader.html'
 	const injectedJS = `
 async function a() {
 	const link = document.getElementById('redirect');
-	fetch('http://www.mocky.io/v2/5ed523d0330000d1bdf7a848')
-		.then((response) => response.json())
-		.then((json) => link.innerText = JSON.stringify(json))
-		.catch((error) => link.innerText = JSON.stringify('NOT'))
-      // const link = document.getElementById('redirect');
-      // link.href = './build/index.html?${params}';
-      // link.click();
-}
-a()
+      const link = document.getElementById('redirect');
+      link.href = './build/index.html?${params}';
+      link.click();
     `
+	const webview = {
+		uri: env.IS_DEV
+			? env.DEV_SERVER
+			: HTMLAndroidPath
+		,
+
+		injectJS: env.IS_DEV
+			? ''
+			: injectedJS
+	}
 
 
 	return (
 		<>
 			<View>
 				<View style={{width: '100%', height: '100%'}}>
-					<Text>{env.IS_DEV}</Text>
-					<WebView
-						injectedJavaScript={injectedJS}
-						source={{uri: HTMLAndroidPath}}
-						originWhitelist={['*']}
-						allowFileAccess={true}
-						// onMessage={onMessage}
-					/>
+					<Text>{String(env.DEV_SERVER)}</Text>
+					{/*<WebView*/}
+					{/*	injectedJavaScript={webview.injectJS}*/}
+					{/*	source={webview.uri/*{*/}
+					{/*		uri: 'http://192.168.1.102:3001/metrics',*/}
+					{/*		method: 'GET'*/}
+					{/*	}*!/*/}
+					{/*	originWhitelist={['*']}*/}
+					{/*	allowFileAccess={true}*/}
+					{/*	// onMessage={onMessage}*/}
+					{/*/>*/}
 				</View>
 			</View>
 		</>
