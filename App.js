@@ -7,7 +7,7 @@ import { env } from './env'
 
 const App: () => React$Node = () => {
 	const params = 'platform=' + Platform.OS
-	const HTMLAndroidPath = 'file:///android_asset/Web.bundle/loader.html'
+	const HTMLPathAndroid = 'file:///android_asset/Web.bundle/loader.html'
 	const injectedJS = `
 async function a() {
 	const link = document.getElementById('redirect');
@@ -16,7 +16,7 @@ async function a() {
       link.click();
     `
 
-	const platform = {HTMLPath: HTMLAndroidPath}
+	const platform = {HTMLPath: HTMLPathAndroid}
 
 	const webview = {
 		uri: env.IS_DEV
@@ -37,10 +37,9 @@ async function a() {
 					<Text>{String(env.DEV_SERVER)}</Text>
 					<WebView
 						injectedJavaScript={webview.injectJS}
-						source={webview.uri/*{
-							uri: 'http://192.168.1.102:3001/metrics',
-							method: 'GET'
-						}*/}
+						source={{
+							uri: webview.uri,
+						}}
 						originWhitelist={['*']}
 						allowFileAccess={true}
 						// onMessage={onMessage}
