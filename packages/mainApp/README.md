@@ -1,3 +1,6 @@
-1. ### `json-server --watch db.json --port 4000`
-2. ### `yarn start` 
+2. #### `yarn start` 
 3. http://localhost:3000
+
+## build
+
+1. #### `yarn build` 
