@@ -29,7 +29,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "dev": "npm-run-all --parallel dev:*",
+    "dev-local": "npm-run-all --parallel dev:*",
     "dev:start": "npm run start",
     "dev:server": "npm run server",
     "start": "react-app-rewired start",
