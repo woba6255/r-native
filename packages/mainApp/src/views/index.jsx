@@ -1,6 +1,4 @@
 import React from "react"
-import { Button } from "evergreen-ui"
-import { useHistory } from "react-router"
 import { routerPostEditor } from "~/views/posts-editor"
 import { ROUTE_INDEX, ROUTE_METRICS, ROUTE_POST_EDITOR, RenderRoutes } from "~/modules/router"
 import { IndexViewGraphTable } from "~/views/metrics"

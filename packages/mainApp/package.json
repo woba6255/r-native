@@ -31,8 +31,9 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:start": "npm run start",
+    "dev:server": "npm run server",
     "start": "react-app-rewired start",
-    "dev:test": "react-app-rewired test",
+    "test": "react-app-rewired test",
     "server": "json-server --watch db.json --port 3001",
     "build": "react-app-rewired build",
     "eject": "react-scripts eject"
