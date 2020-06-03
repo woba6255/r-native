@@ -1,4 +1,4 @@
-#Tue Jun 02 13:41:41 MSK 2020
-base.0=C\:\\Users\\woba6\\projects\\r-native\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Tue Jun 02 19:16:17 MSK 2020
+base.0=D\:\\projects\\react\\r-native\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

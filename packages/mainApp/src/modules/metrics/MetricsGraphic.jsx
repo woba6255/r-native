@@ -1,4 +1,4 @@
-import React, { createRef, useEffect } from "react"
+import React, { createRef, useEffect } from 'react'
 import Chart from 'chart.js'
 
 
@@ -7,16 +7,25 @@ export function MetricsGraphic({metrics}) {
 
 	useEffect(() => {
 		if (metrics.length) {
-			const labels = metrics.map((e) => e.date)
+			const labels = metrics.map((e) =>
+				new Intl.DateTimeFormat('en-US', {
+					month: 'numeric', day: 'numeric',
+					hour: 'numeric', minute: 'numeric', second: 'numeric',
+					hour12: false
+				})
+					.format(
+						Date.parse(e.date)
+					)
+			)
 			const data = metrics.map((e) => e.temperature)
 			const chart = new Chart(ref.current.getContext('2d'), {
-				type: "line",
+				type: 'line',
 				data: {
 					labels: labels,
 					datasets: [
 						{
-							label: "Temperature",
-							data: data,
+							label: 'Temperature',
+							data: data
 						}
 					]
 				},
@@ -27,7 +36,7 @@ export function MetricsGraphic({metrics}) {
 
 
 	return (
-		<div style={{width: '50rem', position: 'relative',}}>
+		<div>
 			<canvas id="myChart" ref={ref}/>
 		</div>
 	)

@@ -16,9 +16,9 @@ export function Metrics() {
 	}, [])
 
 	return (
-		<Pane style={{display: 'inline-flex'}}>
+		<>
 			<MetricsTable metrics={tableState} setMetrics={setMetrics}/>
 			<MetricsGraphic metrics={metrics} setMetrics={setMetrics}/>
-		</Pane>
+		</>
 	)
 }

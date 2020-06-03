@@ -1,5 +1,5 @@
 import { env } from '../env'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { WebView } from 'react-native-webview'
 import React from 'react'
 
@@ -30,18 +30,17 @@ async function a() {
 
 	return (
 		<>
-			<View>
-				<View style={{width: '100%', height: '100%'}}>
-					<WebView
-						injectedJavaScript={webview.injectJS}
-						source={{
-							uri: webview.uri,
-						}}
-						originWhitelist={['*']}
-						allowFileAccess={true}
-						// onMessage={onMessage}
-					/>
-				</View>
+			<View style={{width: '100%', height: '100%'}}>
+				<WebView
+					injectedJavaScript={webview.injectJS}
+					automaticallyAdjustContentInsets={false}
+					source={{
+						uri: webview.uri
+					}}
+					originWhitelist={['*']}
+					allowFileAccess={true}
+					// onMessage={onMessage}
+				/>
 			</View>
 		</>
 	)

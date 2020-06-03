@@ -15,9 +15,9 @@ function Page() {
 	return (
 		<>
 			<NavBar/>
-			<PageBasic>
+			{/*<PageBasic>*/}
 				<Metrics/>
-			</PageBasic>
+			{/*</PageBasic>*/}
 		</>
 	)
 }

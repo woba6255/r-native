@@ -1,12 +1,16 @@
 import React from 'react'
-import { MainRouter } from "~/modules/router"
+import { MainRouter } from '~/modules/router'
 
 function App() {
-	return (
-		<MainRouter>
+	// const appStyles = {
+	// 	zoom: 1.6
+	// }
 
-		</MainRouter>
+	return (
+		<div>
+			<MainRouter/>
+		</div>
 	)
 }
 
-export default App;
+export default App
