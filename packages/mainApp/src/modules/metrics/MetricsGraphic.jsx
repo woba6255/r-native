@@ -8,9 +8,10 @@ export function MetricsGraphic({metrics}) {
 	useEffect(() => {
 		if (metrics.length) {
 			const labels = metrics.map((e) =>
-				new Intl.DateTimeFormat('en-US', {
+				new Intl.DateTimeFormat('ru', {
+					year: '2-digit',
 					month: 'numeric', day: 'numeric',
-					hour: 'numeric', minute: 'numeric', second: 'numeric',
+					hour: 'numeric', minute: 'numeric',/* second: 'numeric',*/
 					hour12: false
 				})
 					.format(
