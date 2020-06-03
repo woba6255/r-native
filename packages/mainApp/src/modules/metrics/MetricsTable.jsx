@@ -1,6 +1,6 @@
 import React from "react"
-import { TableEditor } from "~/components/table-editor"
-import { schema } from "~/modules/metrics/TableSchema"
+import { TableEditor } from "components/table-editor"
+import { schema } from "modules/metrics/TableSchema"
 
 
 

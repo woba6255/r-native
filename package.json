@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "run-a": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "ios": "echo \"Ios Builder not setup!\"",
     "start": "react-native start",
     "test": "jest",
     "server": "json-server --watch db.json --port 4000",

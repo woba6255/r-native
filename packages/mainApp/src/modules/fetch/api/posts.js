@@ -1,6 +1,6 @@
 import ftch from '../index'
 import PropTypes from "prop-types";
-import { API_URL_ROUTE_POSTS } from "~/modules/fetch/ApiRouts"
+import { API_URL_ROUTE_POSTS } from "modules/fetch/ApiRouts"
 
 export class PostsManger {
 	static postType = PropTypes.shape({

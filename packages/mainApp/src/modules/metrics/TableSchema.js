@@ -1,5 +1,5 @@
-import { MetricsManager } from "~/modules/fetch/api"
-import { TABLE_CELL_ROLE_DATE, TABLE_CELL_ROLE_INPUT } from "~/components/table-editor/TableAliases"
+import { MetricsManager } from "modules/fetch/api"
+import { TABLE_CELL_ROLE_DATE, TABLE_CELL_ROLE_INPUT } from "components/table-editor/TableAliases"
 
 
 

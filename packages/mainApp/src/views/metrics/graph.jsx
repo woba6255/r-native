@@ -1,5 +1,5 @@
 import React from "react"
-import { ROUTE_CREATE_GRAPH_FROM_METRICS } from "~/modules/router"
+import { ROUTE_CREATE_GRAPH_FROM_METRICS } from "modules/router"
 import { useHistory } from "react-router"
 
 export function routerGraph() {

@@ -1,8 +1,8 @@
 import React from "react"
-import { ROUTE_METRICS } from "~/modules/router"
-import { Metrics } from "~/modules/metrics/Metrics"
-import { NavBar } from "~/modules/nav-bar/NavBar"
-import { PageBasic } from "~/components/page"
+import { ROUTE_METRICS } from "modules/router"
+import { Metrics } from "modules/metrics/Metrics"
+import { NavBar } from "modules/nav-bar/NavBar"
+import { PageBasic } from "components/page"
 
 export function IndexViewGraphTable() {
 	return [

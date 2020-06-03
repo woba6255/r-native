@@ -19,7 +19,7 @@ export function MetricsGraphic({metrics}) {
 					)
 			)
 			const data = metrics.map((e) => e.temperature)
-			const chart = new Chart(ref.current.getContext('2d'), {
+			new Chart(ref.current.getContext('2d'), {
 				type: 'line',
 				data: {
 					labels: labels,

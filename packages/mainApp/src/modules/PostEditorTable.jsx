@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types";
-import { PostsManger } from "~/modules/fetch/api"
-import { TableEditor } from "~/components/table-editor"
+import { PostsManger } from "modules/fetch/api"
+import { TableEditor } from "components/table-editor"
 import {
 	TABLE_CELL_ROLE_DATE,
 	TABLE_CELL_ROLE_ID,
 	TABLE_CELL_ROLE_INPUT,
-} from "~/components/table-editor/TableAliases"
+} from "components/table-editor/TableAliases"
 
 PostEditorTable.propTypes = {
 	posts: PostsManger.postsType,

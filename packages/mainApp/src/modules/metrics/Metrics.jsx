@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { MetricsTable } from "~/modules/metrics/MetricsTable"
-import { MetricsManager } from "~/modules/fetch/api"
-import { MetricsGraphic } from "~/modules/metrics/MetricsGraphic"
+import { MetricsTable } from "modules/metrics/MetricsTable"
+import { MetricsManager } from "modules/fetch/api"
+import { MetricsGraphic } from "modules/metrics/MetricsGraphic"
 import { Pane } from "evergreen-ui"
 
 

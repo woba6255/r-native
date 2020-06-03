@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainRouter } from '~/modules/router'
+import { MainRouter } from 'modules/router'
 
 function App() {
 	// const appStyles = {
