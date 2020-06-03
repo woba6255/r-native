@@ -1,25 +1,25 @@
-import { metrics } from '../data'
+import { bridge } from '../index'
 
 
 export class MetricsManager {
 	static async getAll() {
 		// TODO validate
-		// TODO re...
-		return metrics
+		// throw Error(a)
+		return await bridge('GET_ALL_METRICS')
 	}
 
 	static async createOne(data) {
 		// TODO validate
-		return metrics.push(data)
+		return await bridge('CREATE_METRIC', data)
 	}
 
 	static async deleteOneByID(ID) {
 		// TODO validate
-		return metrics.splice(metrics.findIndex(e => e.id === ID), 1)
+		return await bridge('DELETE_METRIC_BY_ID', ID)
 	}
 
-	static async editOne(newValue, ID = newValue.id) {
+	static async editOne(newValue) {
 		// TODO validate
-		return metrics[metrics.findIndex(e => e.id === ID)] = newValue
+		return await bridge('EDIT_METRIC_BY_ID', newValue)
 	}
 }

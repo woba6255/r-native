@@ -1,9 +1,9 @@
 import React from 'react'
-import { IndexWebview } from './indexWebview'
+import { MainWebview } from './main-webview/MainWebview'
 
 
 const App: () => React$Node = () => {
-	return <IndexWebview />
+	return <MainWebview />
 }
 
 export default App

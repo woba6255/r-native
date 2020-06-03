@@ -8,7 +8,6 @@
     "ios": "echo \"Ios Builder not setup!\"",
     "start": "react-native start",
     "test": "jest",
-    "server": "json-server --watch db.json --port 4000",
     "cra": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "lint": "eslint ."
   },
@@ -28,7 +27,6 @@
     "cross-env": "^7.0.2",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
-    "json-server": "^0.16.1",
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.11.0"
   },

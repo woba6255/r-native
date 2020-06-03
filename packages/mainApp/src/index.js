@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+window.lalala = ((mess) => {
+    throw Error(mess)
+})
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

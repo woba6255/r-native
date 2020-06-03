@@ -1,3 +1,23 @@
+export async function bridge(key, data = '') {
+	if(!window.ReactNativeWebView) throw Error('[ERR] Used outside React Webview!')
+
+
+		return await new Promise(resolve => {
+		const hash = Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7)
+		const json = JSON.stringify({key, data, hash})
+
+		window.ReactNativeWebView.postMessage(json)
+
+		if(!window.ReactNativeWebViewResponse) window.ReactNativeWebViewResponse = {}
+
+		window.ReactNativeWebViewResponse[hash] = (response) => {
+			resolve(response)
+			window.ReactNativeWebViewResponse[hash] = null
+		}
+	})
+}
+
+
 // import { config } from "config"
 //
 //
