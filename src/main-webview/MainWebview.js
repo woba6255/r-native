@@ -29,7 +29,7 @@ export function MainWebview() {
 		const json = JSON.parse(message.nativeEvent.data)
 
 		const {hash, key, data} = json
-		const response = await db(key, hash, data)
+		const response = await db(key, data)
 		const inj = () => inject(ref, hash, response)
 
 		inj()

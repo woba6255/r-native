@@ -2,10 +2,8 @@
 
 export function inject(ref, hash, data) {
 	const js = `
-	setTimeout(() => {
-        window.ReactNativeWebViewResponse.${hash}(${JSON.stringify(data)}); void(0)
-	}, 100)
+        window.ReactNativeWebViewResponseRR('${hash}', '${JSON.stringify(data)}'); void(0)
 	`
-	console.log(data)
+	console.log(js)
 	ref.current.injectJavaScript(js)
 }

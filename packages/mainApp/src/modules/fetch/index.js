@@ -19,6 +19,7 @@ export async function bridge(key, data = '') {
 		window.ReactNativeWebViewResponse[hash] = (response) => {
 			resolve(response)
 			// clearInterval(interval)
+			// window.alert(JSON.stringify(response))
 			window.ReactNativeWebViewResponse[hash] = null
 
 		}
