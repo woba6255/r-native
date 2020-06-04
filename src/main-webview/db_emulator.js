@@ -16,10 +16,7 @@ export async function db(key, data) {
 			metrics[metrics.findIndex(e => e.id === data.id)] = data
 			return metrics
 		}
-		default:
-			console.log('-')
 	}
-	console.log(metrics)
 }
 
 const md = [

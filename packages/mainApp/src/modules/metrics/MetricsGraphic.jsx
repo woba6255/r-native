@@ -37,7 +37,7 @@ export function MetricsGraphic({metrics}) {
 
 
 	return (
-		<div>
+		<div style={{margin: '5px 20px 5px 0'}}>
 			<canvas id="myChart" ref={ref}/>
 		</div>
 	)

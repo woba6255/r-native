@@ -1,24 +1,24 @@
-import { bridge } from '~/modules/fetch'
+import { bridgeDialog } from '~/bridge'
 
 
 export class MetricsManager {
 	static async getAll() {
 		// TODO validate
-		return await bridge('GET_ALL_METRICS')
+		return await bridgeDialog('GET_ALL_METRICS')
 	}
 
 	static async createOne(data) {
 		// TODO validate
-		return await bridge('CREATE_METRIC', data)
+		return await bridgeDialog('CREATE_METRIC', data)
 	}
 
 	static async deleteOneByID(ID) {
 		// TODO validate
-		return await bridge('DELETE_METRIC_BY_ID', ID)
+		return await bridgeDialog('DELETE_METRIC_BY_ID', ID)
 	}
 
 	static async editOne(newValue) {
 		// TODO validate
-		return await bridge('EDIT_METRIC_BY_ID', newValue)
+		return await bridgeDialog('EDIT_METRIC_BY_ID', newValue)
 	}
 }
