@@ -1,10 +1,9 @@
-import { bridge } from '../index'
+import { bridge } from '~/modules/fetch'
 
 
 export class MetricsManager {
 	static async getAll() {
 		// TODO validate
-		// throw Error(a)
 		return await bridge('GET_ALL_METRICS')
 	}
 

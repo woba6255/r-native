@@ -1,5 +1,5 @@
 export async function db(key, data) {
-
+	if (metrics === null) metrics = md
 
 	switch (key) {
 		case 'GET_ALL_METRICS': {
@@ -16,11 +16,13 @@ export async function db(key, data) {
 			metrics[metrics.findIndex(e => e.id === data.id)] = data
 			return metrics
 		}
+		default:
+			console.log('-')
 	}
+	console.log(metrics)
 }
 
-
-const metrics = [
+const md = [
 	{
 		"id": "r3s0r",
 		"date": "2020-05-28T10:36:57.753Z",
@@ -72,3 +74,4 @@ const metrics = [
 		"temperature": "20"
 	}
 ]
+let metrics = null
