@@ -25,12 +25,15 @@ export function MainWebview() {
 			injectJS: injectedJS
 		}
 
-
 	async function onMessage(message) {
 		const json = JSON.parse(message.nativeEvent.data)
-		const response = await db(json.key, json.hash, json.data)
-		inject(ref, json.hash, response)
-	}
+
+		const {hash, key, data} = json
+		const response = await db(key, hash, data)
+		const inj = () => inject(ref, hash, response)
+
+		inj()
+		}
 
 	return (
 		<>
@@ -43,7 +46,9 @@ export function MainWebview() {
 					}}
 					originWhitelist={['*']}
 					allowFileAccess={true}
+					javaScriptEnabled={true}
 					onMessage={onMessage}
+					onError={(log) => console.log(log)}
 				/>
 			</View>
 		</>
