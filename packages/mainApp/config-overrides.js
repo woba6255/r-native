@@ -5,7 +5,7 @@ module.exports = {
 		config.resolve.alias['~'] = path.resolve(__dirname, 'src')
 		config.output.path = path.join(__dirname, '..', '..', 'html', 'Web.bundle', 'build')
 		config.output.publicPath = './'
-		config.devServer.open = false
+		// config.devServer.open = false
 		return config
 	},
 }
