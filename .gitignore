@@ -3,6 +3,8 @@
 /android/app/build/
 android/app/build/
 android/app/build/*
+android/.gradle/
+android/.gradle/*
 
 # Logs
 logs
